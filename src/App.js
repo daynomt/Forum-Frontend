@@ -22,7 +22,7 @@ function App() {
       token = "";
     } else {
       const userRes = await axios.get(
-        `${process.env.REACT_APP_basr_url}/api/users`,
+        `${process.env.REACT_APP_base_url}/api/users`,
         {
           headers: { "x-auth-token": token },
         }

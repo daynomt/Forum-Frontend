@@ -25,7 +25,7 @@ function Askin() {
     e.preventDefault();
     try {
       const loginRes = await axios.post(
-        `${process.env.REACT_APP_basr_url}/api/users`,
+        `${process.env.REACT_APP_base_url}/api/users`,
         {
           questionTitle: form.questionTitle,
           questionDescription: form.questionDescription,

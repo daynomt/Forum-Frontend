@@ -26,7 +26,7 @@ function AnswerPage({ allQuestions }) {
       try {
         // //fetching the questions from data base (getPosts(found in question.controller))
         const questionRes = await fetch(
-          `${process.env.REACT_APP_basr_url}/api/users`,
+          `${process.env.REACT_APP_base_url}/api/users`,
           {
             method: "GET",
             // ///needs auth
@@ -78,7 +78,7 @@ function AnswerPage({ allQuestions }) {
   const fetchAnswers = async () => {
     try {
       const answerRes = await axios.get(
-        `${process.env.REACT_APP_basr_url}/api/users${filteredquestionId}`,
+        `${process.env.REACT_APP_base_url}/api/users${filteredquestionId}`,
         {
           headers: { "x-auth-token": userData.token },
         }
@@ -112,7 +112,7 @@ function AnswerPage({ allQuestions }) {
     e.preventDefault();
     try {
       const loginRes = await axios.post(
-        `${process.env.REACT_APP_basr_url}/api/users`,
+        `${process.env.REACT_APP_base_url}/api/users`,
         {
           answerDescription: form.answerDescription,
           questionId: filteredquestionId,
