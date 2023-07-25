@@ -21,9 +21,12 @@ function App() {
       localStorage.setItem("auth-token", "");
       token = "";
     } else {
-      const userRes = await axios.get("http://localhost:4000/api/users", {
-        headers: { "x-auth-token": token },
-      });
+      const userRes = await axios.get(
+        `${process.env.REACT_APP_basr_url}/api/users`,
+        {
+          headers: { "x-auth-token": token },
+        }
+      );
 
       setUserData({
         token,

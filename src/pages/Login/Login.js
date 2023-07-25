@@ -19,7 +19,7 @@ function Login() {
     e.preventDefault();
     try {
       const loginRes = await axios.post(
-        "http://localhost:4000/api/users/login",
+        `${process.env.REACT_APP_basr_url}/api/users`,
         {
           email: form.email,
           password: form.password,

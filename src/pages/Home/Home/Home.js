@@ -23,7 +23,7 @@ function Home({ logout }) {
   const Questions = async () => {
     try {
       const questionRes = await axios.get(
-        "http://localhost:4000/api/questions/ask",
+        `${process.env.REACT_APP_basr_url}/api/users`,
         {
           headers: { "x-auth-token": userData.token },
         }
